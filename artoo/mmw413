@@ -1,0 +1,19 @@
+#Maggie's Scrape of megconley.com
+######(http://www.megconley.com/)
+<pre>
+var storyArray = [];
+var entrytitle;
+artoo.scrape('.post', {
+    text: function() {
+        entrytitle = $(this).find(".entry-title").text();
+        if (entrytitle != '') {
+            var kittyKat = {
+                'entry-title': entrytitle,  
+            };
+            storyArray.push(kittyKat);
+        }
+    }
+}, function() {
+    artoo.savePrettyJson(storyArray);
+}); 
+</pre>
