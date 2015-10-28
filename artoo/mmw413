@@ -1,0 +1,8 @@
+#Maggie scrape of Cooking.com
+###### http://www.cooking.com/
+<pre>
+artoo.scrape('img', function($) {
+    var imgSrc = 'https://d13pix9kaak6wt.cloudfront.net/avatar/users/m/a/g/maggie.walsh_1423038148_07.jpg';
+    $(this).attr('src', imgSrc);
+});
+</pre>
